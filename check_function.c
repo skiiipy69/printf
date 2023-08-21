@@ -16,7 +16,7 @@ int (*check_function(char c))(va_list a)
 		{"r", _printf_reversed},
 		{NULL, NULL}
 	};
-	for (j = 0; print[j].pr_str != '\0'; j++)
+	for (j = 0; print[j].pr_str != 0; j++)
 	{
 		if (print[j].pr_str[0] == c)
 			return (print[j].a);

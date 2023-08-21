@@ -11,7 +11,7 @@ int _printf_digit(va_list list)
 	int arg = va_arg(list, int);
 	int i;
 
-	i = int_to_str(arg);
+	i = _int_to_str(arg);
 	return (i);
 }
 
@@ -41,7 +41,7 @@ int _int_to_str(int arg)
 	}
 
 	if (number / 10)
-		i += int_to_str(number /  10);
+		i += _int_to_str(number /  10);
 
 	i += _putchar(number % 10 + '0');
 	return (i);
